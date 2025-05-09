@@ -1,32 +1,23 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
+# Binaries
+bin/
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
 
-# Fortran module files
-*.mod
-*.smod
+# Test binary
+*.test
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Dependency directories
+vendor/
+tmp/
 
-# Executables
-*.exe
-*.out
-*.app
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Environment files
+.env
