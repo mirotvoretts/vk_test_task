@@ -27,7 +27,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	log.Printf("Starting server on port %s", cfg.GRPCPort)
+	log.Printf("Starting server on port: %d", cfg.GRPCPort)
 	if err := srv.Start(lis); err != nil {
 		log.Fatalf("failed to start server: %v", err)
 	}
