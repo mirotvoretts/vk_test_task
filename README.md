@@ -1,7 +1,6 @@
 # VK Тестовое задание :: PubSub Service
 
 [![Go Version](https://img.shields.io/badge/go-1.20+-00ADD8?style=flat-square&logo=go)](https://golang.org/dl/)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/mirotvoretts/vk_test_task/go.yml?style=flat-square&logo=github-actions&label=build)](https://github.com/mirotvoretts/vk_test_task/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 ## Как работает сервис
@@ -35,13 +34,18 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 1. Генерация gRPC кода
 
 ```bash
-protoc --go_out=./pkg/proto --go-grpc_out=./pkg/proto proto/pubsub.proto
+protoc --go_out=. --go-grpc_out=. proto/pubsub.proto
 ```
 
-2. Сборка сервера
+2.1 Сборка сервера
 
 ```bash
 go build -o bin/server ./cmd/server
+```
+
+2.2 Сборка клиента [ОПЦИОНАЛЬНО]
+```bash
+go build -o bin/client ./client
 ```
 
 3. Запускаем
@@ -49,6 +53,12 @@ go build -o bin/server ./cmd/server
 ```bash
 ./bin/server
 ```
+
+```bash
+./bin/client
+```
+
+> Запускаем в разных терминалах
 
 ## Тестирование
 
